@@ -33,7 +33,7 @@ def cmd_start(message):
         bot.send_message(message.chat.id, 'То скільки тобі років?')
     elif state == config.States.S_ENTER_SEX.value:
         bot.send_message(message.chat.id, 'То якої ти статі?')
-    elif state == 0:
+    elif state == config.States.S_START.value:
         bot.send_message(message.chat.id, 'Привіт! Як тебе звуть?')
         dbworker.set_state(message.chat.id, config.States.S_ENTER_NAME.value)
     else:
